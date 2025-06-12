@@ -1,22 +1,20 @@
 # Use official Node.js LTS image
-FROM node:18
+FROM node:18-alpine
 
-# Set working directory inside the container
-WORKDIR /app
+# Create app directory
+WORKDIR /usr/src/app
 
-# Copy dependency files first
+# Install app dependencies
 COPY package*.json ./
+RUN npm install --production
 
-# Install dependencies
-RUN npm install
+# Bundle app source
+COPY index.js ./
 
-# Copy the rest of the app
-COPY . .
-
-# Expose the port the app runs on
+# Expose port
 EXPOSE 3000
 
-# Run the app
+# Start the app
 CMD ["node", "index.js"]
 
-# test 2
+# Test 1
