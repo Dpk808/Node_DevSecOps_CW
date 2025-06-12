@@ -1,0 +1,14 @@
+{
+  "name": "node-devsecops-app",
+  "version": "1.0.0",
+  "description": "A simple Node.js app for DevSecOps testing",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Deepak Yadav",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
